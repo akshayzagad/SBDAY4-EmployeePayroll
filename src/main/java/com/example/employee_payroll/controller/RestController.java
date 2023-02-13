@@ -49,10 +49,12 @@ public class RestController {
         ResponseDTO responseDTO=new ResponseDTO("Edit Done",employeePayrollData);
         return new  ResponseEntity<ResponseDTO>(responseDTO , HttpStatus.OK);
     }
-    @DeleteMapping("/get/{empId}")
+    @DeleteMapping("/delete/{empId}")
     public ResponseEntity<ResponseDTO> deleteEmployeePayroollDataById(@PathVariable("empId") int empId){
-        ResponseDTO responseDTO=new ResponseDTO("Deleted", empId);
-        return new  ResponseEntity<ResponseDTO>(responseDTO , HttpStatus.OK);
+        EmployeePayrollData employeePayrollData;
+        employeePayrollService.deleteEmployeePayrollData(empId);
+        ResponseDTO respDTO = new ResponseDTO("Deleted Successfully","Deleted Id:"+empId);
+        return new  ResponseEntity<ResponseDTO>(respDTO , HttpStatus.OK);
     }
 
 
