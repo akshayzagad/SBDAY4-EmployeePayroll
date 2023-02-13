@@ -1,35 +1,58 @@
 package com.example.employee_payroll.controller;
 
 import com.example.employee_payroll.dto.EmployeePayrollDTO;
+import com.example.employee_payroll.dto.ResponseDTO;
+import com.example.employee_payroll.model.EmployeePayrollData;
+import com.example.employee_payroll.service.EmployeePayrollService;
+import com.example.employee_payroll.service.IEService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 @org.springframework.web.bind.annotation.RestController
 @RequestMapping("/employeepayrollservice")
 public class RestController {
+    @Autowired
+    IEService employeePayrollService;
     @RequestMapping(value = {"/get"})
-    public ResponseEntity<String> getEmployeePayroollData(){
-        return new ResponseEntity<String>("Get Call Succsess", HttpStatus.OK);
+    public ResponseEntity<ResponseDTO> getEmployeePayroollData(){
+        List<EmployeePayrollData> employeePayrollDataList;
+        employeePayrollDataList = employeePayrollService.getEmployeePayrollData();
+        ResponseDTO responseDTO=new ResponseDTO("Fill The Required Filled",employeePayrollDataList);
+        return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
     }
 
     @GetMapping("/get/{empId}")
-    public ResponseEntity<String> getEmployeePayroollDataById(@PathVariable("empId") int empId){
-        return new  ResponseEntity<String>("Get Call Succsess for id : " +empId , HttpStatus.OK);
+    public ResponseEntity<ResponseDTO> getEmployeePayroollDataById(@PathVariable("empId") int empId){
+        EmployeePayrollData employeePayrollData;
+        employeePayrollData=employeePayrollService.getEmployeePayrollDataById(empId);
+        ResponseDTO responseDTO=new ResponseDTO("Get call id Succsess",employeePayrollData);
+        return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
     }
 
     @PostMapping("/create")
-    public ResponseEntity<String> createEmployeePayroollData(@RequestBody EmployeePayrollDTO employeePayrollDTO){
-        return new  ResponseEntity<String>("Created Data Succsess : " +employeePayrollDTO , HttpStatus.OK);
+    public ResponseEntity<ResponseDTO> createEmployeePayroollData(@RequestBody EmployeePayrollDTO employeePayrollDTO){
+        EmployeePayrollData employeePayrollData;
+        employeePayrollData=employeePayrollService.createEmployeePayrollData(employeePayrollDTO);
+        ResponseDTO responseDTO=new ResponseDTO("Created Succsess",employeePayrollData);
+        return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
+//        return new  ResponseEntity<String>("Created Data Succsess : " +employeePayrollDTO , HttpStatus.OK);
     }
-    @PutMapping("/create")
-    public ResponseEntity<String> updateEmployeePayroollData(@RequestBody EmployeePayrollDTO employeePayrollDTO){
-        return new  ResponseEntity<String>("Updated Data Succsess : " +employeePayrollDTO , HttpStatus.OK);
+    @PutMapping("/edit/{empID}")
+    public ResponseEntity<ResponseDTO> updateEmployeePayroollData(@PathVariable ("empID")int empId,@RequestBody EmployeePayrollDTO employeePayrollDTO){
+        EmployeePayrollData employeePayrollData;
+        employeePayrollData= employeePayrollService.updateEmployeePayrollData(empId,employeePayrollDTO);
+        ResponseDTO responseDTO=new ResponseDTO("Edit Done",employeePayrollData);
+        return new  ResponseEntity<ResponseDTO>(responseDTO , HttpStatus.OK);
     }
     @DeleteMapping("/get/{empId}")
-    public ResponseEntity<String> deleteEmployeePayroollDataById(@PathVariable("empId") int empId){
-        return new  ResponseEntity<String>("Delete Call Succsess for id : " +empId , HttpStatus.OK);
+    public ResponseEntity<ResponseDTO> deleteEmployeePayroollDataById(@PathVariable("empId") int empId){
+        ResponseDTO responseDTO=new ResponseDTO("Deleted", empId);
+        return new  ResponseEntity<ResponseDTO>(responseDTO , HttpStatus.OK);
     }
 
 
