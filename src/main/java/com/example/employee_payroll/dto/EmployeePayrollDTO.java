@@ -1,6 +1,14 @@
 package com.example.employee_payroll.dto;
 
-public class EmployeePayrollDTO {
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+public @Data class EmployeePayrollDTO {
     public String name;
     public long salary;
 
@@ -9,11 +17,4 @@ public class EmployeePayrollDTO {
         this.salary = salary;
     }
 
-    @Override
-    public String toString() {
-        return "EmployeePayrollDTO{" +
-                "name='" + name + '\'' +
-                ", salary=" + salary +
-                '}';
-    }
 }

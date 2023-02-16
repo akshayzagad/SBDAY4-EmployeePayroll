@@ -1,19 +1,16 @@
 package com.example.employee_payroll.model;
 
 import com.example.employee_payroll.dto.EmployeePayrollDTO;
+import lombok.Data;
 
-public class EmployeePayrollData {
+public class  EmployeePayrollData {
     private int employeeId;
     private String name;
     private long salary;
 
     public EmployeePayrollData() {
     }
-    public EmployeePayrollData(int employeeId, EmployeePayrollData employeePayrollData ){
-        this.employeeId = employeeId;
-        this.name= employeePayrollData.name;
-        this.salary=employeePayrollData.salary;
-    }
+
 
     public EmployeePayrollData(int employeeId, EmployeePayrollDTO employeePayrollData) {
         this.employeeId = employeeId;
