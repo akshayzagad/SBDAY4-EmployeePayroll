@@ -22,8 +22,9 @@ public class EmployeePayrollService implements IEService {
     public EmployeePayrollData getEmployeePayrollDataById(int empId) {
         return employeePayrollDataArrayList.stream().
                 filter(employeePayrollData -> employeePayrollData.getEmployeeId() == empId).
-                findFirst().
-                orElseThrow(()->new EmpPayRollException("Exception Not Found"));
+                findFirst()
+//                   .orElseThrow(()->new IllegalArgumentException("Id Not Found"));
+                .orElseThrow(()->new EmpPayRollException("ID Not Found"));
     }
 
     @Override
