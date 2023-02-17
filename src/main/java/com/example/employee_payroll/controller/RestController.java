@@ -4,6 +4,7 @@ import com.example.employee_payroll.dto.EmployeePayrollDTO;
 import com.example.employee_payroll.dto.ResponseDTO;
 import com.example.employee_payroll.model.EmployeePayrollData;
 import com.example.employee_payroll.service.IEService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -35,7 +36,7 @@ public class RestController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<ResponseDTO> createEmployeePayroollData(@RequestBody EmployeePayrollDTO employeePayrollDTO) {
+    public ResponseEntity<ResponseDTO> createEmployeePayroollData(@Valid @RequestBody EmployeePayrollDTO employeePayrollDTO) {
         EmployeePayrollData employeePayrollData;
         employeePayrollData = employeePayrollService.createEmployeePayrollData(employeePayrollDTO);
         ResponseDTO responseDTO = new ResponseDTO("Created Succsess", employeePayrollData);
@@ -44,7 +45,7 @@ public class RestController {
     }
 
     @PutMapping("/edit/{empID}")
-    public ResponseEntity<ResponseDTO> updateEmployeePayroollData(@PathVariable("empID") int empId, @RequestBody EmployeePayrollDTO employeePayrollDTO) {
+    public ResponseEntity<ResponseDTO> updateEmployeePayroollData(@Valid @PathVariable("empID") int empId, @RequestBody EmployeePayrollDTO employeePayrollDTO) {
         EmployeePayrollData employeePayrollData;
         employeePayrollData = employeePayrollService.updateEmployeePayrollData(empId, employeePayrollDTO);
         ResponseDTO responseDTO = new ResponseDTO("Edit Done", employeePayrollData);
