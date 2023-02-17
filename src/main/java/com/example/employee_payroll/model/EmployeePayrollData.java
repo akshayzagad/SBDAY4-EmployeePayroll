@@ -3,44 +3,34 @@ package com.example.employee_payroll.model;
 import com.example.employee_payroll.dto.EmployeePayrollDTO;
 import lombok.Data;
 
-public class  EmployeePayrollData {
+import java.time.LocalDate;
+import java.util.List;
+
+
+public  @Data class  EmployeePayrollData {
     private int employeeId;
     private String name;
     private long salary;
-
+    public String gender;
+    private LocalDate startDate;
+    public String note;
+    public String profilePic;
+    public List<String> department;
     public EmployeePayrollData() {
     }
 
 
-    public EmployeePayrollData(int employeeId, EmployeePayrollDTO employeePayrollData) {
+    public EmployeePayrollData(int employeeId, EmployeePayrollDTO employeePayrollDTO) {
         this.employeeId = employeeId;
-        this.name= employeePayrollData.name;
-        this.salary=employeePayrollData.salary;
+        this.name= employeePayrollDTO.name;
+        this.salary=employeePayrollDTO.salary;
+        this.gender=employeePayrollDTO.gender;
+        this.startDate=employeePayrollDTO.startDate;
+        this.note=employeePayrollDTO.note;
+        this.profilePic=employeePayrollDTO.profilePic;
+        this.department=employeePayrollDTO.department;
     }
 
-    public int getEmployeeId() {
-        return employeeId;
-    }
-
-    public void setEmployeeId(int employeeId) {
-        this.employeeId = employeeId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public long getSalary() {
-        return salary;
-    }
-
-    public void setSalary(long salary) {
-        this.salary = salary;
-    }
 }
 
 
