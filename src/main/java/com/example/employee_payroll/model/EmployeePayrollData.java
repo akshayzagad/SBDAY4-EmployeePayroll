@@ -28,7 +28,7 @@ public  @Data class  EmployeePayrollData {
     }
 
 
-    public EmployeePayrollData( EmployeePayrollDTO employeePayrollDTO) {
+    public  EmployeePayrollData( EmployeePayrollDTO employeePayrollDTO) {
         this.name= employeePayrollDTO.name;
         this.salary=employeePayrollDTO.salary;
         this.gender=employeePayrollDTO.gender;
@@ -38,6 +38,15 @@ public  @Data class  EmployeePayrollData {
         this.department=employeePayrollDTO.department;
     }
 
+    public void updateEmployeePayrollData(EmployeePayrollDTO employeePayrollDTO) {
+        this.name= employeePayrollDTO.name;
+        this.salary=employeePayrollDTO.salary;
+        this.gender=employeePayrollDTO.gender;
+        this.startDate=employeePayrollDTO.startDate;
+        this.note=employeePayrollDTO.note;
+        this.profilePic=employeePayrollDTO.profilePic;
+        this.department=employeePayrollDTO.department;
+    }
 }
 
 
