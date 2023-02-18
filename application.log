@@ -1,148 +1,33 @@
-2023-02-17T10:58:51.226+05:30  INFO 37340 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Starting EmployeePayrollApplication using Java 17.0.6 with PID 37340 (C:\Users\Akshay\IdeaProjects\Employee_Payroll\target\classes started by Akshay in C:\Users\Akshay\IdeaProjects\Employee_Payroll)
-2023-02-17T10:58:51.236+05:30 DEBUG 37340 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Running with Spring Boot v3.0.2, Spring v6.0.4
-2023-02-17T10:58:51.237+05:30  INFO 37340 --- [restartedMain] c.e.e.EmployeePayrollApplication         : The following 1 profile is active: "DEV"
-2023-02-17T10:58:54.209+05:30  WARN 37340 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-02-17T10:58:54.669+05:30  INFO 37340 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Started EmployeePayrollApplication in 4.057 seconds (process running for 5.024)
-2023-02-17T10:58:54.673+05:30  INFO 37340 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Employee Payroll App Started in DEV Environment
-2023-02-17T10:59:28.533+05:30  WARN 37340 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.example.employee_payroll.dto.ResponseDTO> com.example.employee_payroll.controller.RestController.createEmployeePayroollData(com.example.employee_payroll.dto.EmployeePayrollDTO) with 2 errors: [Field error in object 'employeePayrollDTO' on field 'salary': rejected value [200]; codes [Min.employeePayrollDTO.salary,Min.salary,Min.long,Min]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeePayrollDTO.salary,salary]; arguments []; default message [salary],500]; default message [Minimum salary should be 500]] [Field error in object 'employeePayrollDTO' on field 'name': rejected value [arush]; codes [Pattern.employeePayrollDTO.name,Pattern.name,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeePayrollDTO.name,name]; arguments []; default message [name],[Ljakarta.validation.constraints.Pattern$Flag;@6b39926,^[A-Z]{1}[a-z]{2,}\s{0,}$]; default message [Please enter valid name]] ]
-2023-02-17T11:25:22.315+05:30  WARN 37340 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m28s204ms33µs200ns).
-2023-02-17T11:46:45.426+05:30  INFO 23960 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Starting EmployeePayrollApplication using Java 17.0.6 with PID 23960 (C:\Users\Akshay\IdeaProjects\Employee_Payroll\target\classes started by Akshay in C:\Users\Akshay\IdeaProjects\Employee_Payroll)
-2023-02-17T11:46:45.430+05:30 DEBUG 23960 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Running with Spring Boot v3.0.2, Spring v6.0.4
-2023-02-17T11:46:45.431+05:30  INFO 23960 --- [restartedMain] c.e.e.EmployeePayrollApplication         : The following 1 profile is active: "DEV"
-2023-02-17T11:46:48.169+05:30  WARN 23960 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-02-17T11:46:48.615+05:30  INFO 23960 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Started EmployeePayrollApplication in 3.679 seconds (process running for 4.514)
-2023-02-17T11:46:48.618+05:30  INFO 23960 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Employee Payroll App Started in DEV Environment
-2023-02-17T11:47:15.434+05:30  WARN 23960 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.employee_payroll.exception.EmpPayRollException: Exception Not Found]
-2023-02-17T13:11:01.810+05:30  WARN 23960 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m12s879ms542µs100ns).
-2023-02-17T17:30:25.902+05:30  INFO 38180 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Starting EmployeePayrollApplication using Java 17.0.6 with PID 38180 (C:\Users\Akshay\IdeaProjects\Employee_Payroll\target\classes started by Akshay in C:\Users\Akshay\IdeaProjects\Employee_Payroll)
-2023-02-17T17:30:25.903+05:30 DEBUG 38180 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Running with Spring Boot v3.0.2, Spring v6.0.4
-2023-02-17T17:30:25.903+05:30  INFO 38180 --- [restartedMain] c.e.e.EmployeePayrollApplication         : The following 1 profile is active: "DEV"
-2023-02-17T17:30:27.294+05:30  WARN 38180 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-02-17T17:30:27.494+05:30  WARN 38180 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2023-02-17T17:30:27.507+05:30  WARN 38180 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2023-02-17T17:30:27.537+05:30 ERROR 38180 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8080 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
-
-2023-02-17T17:30:37.178+05:30  INFO 28544 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Starting EmployeePayrollApplication using Java 17.0.6 with PID 28544 (C:\Users\Akshay\IdeaProjects\Employee_Payroll\target\classes started by Akshay in C:\Users\Akshay\IdeaProjects\Employee_Payroll)
-2023-02-17T17:30:37.179+05:30 DEBUG 28544 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Running with Spring Boot v3.0.2, Spring v6.0.4
-2023-02-17T17:30:37.180+05:30  INFO 28544 --- [restartedMain] c.e.e.EmployeePayrollApplication         : The following 1 profile is active: "DEV"
-2023-02-17T17:30:38.411+05:30  WARN 28544 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-02-17T17:30:38.592+05:30  WARN 28544 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2023-02-17T17:30:38.605+05:30  WARN 28544 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2023-02-17T17:30:38.633+05:30 ERROR 28544 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8080 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
-
-2023-02-17T17:30:51.214+05:30  INFO 980 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Starting EmployeePayrollApplication using Java 17.0.6 with PID 980 (C:\Users\Akshay\IdeaProjects\Employee_Payroll\target\classes started by Akshay in C:\Users\Akshay\IdeaProjects\Employee_Payroll)
-2023-02-17T17:30:51.215+05:30 DEBUG 980 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Running with Spring Boot v3.0.2, Spring v6.0.4
-2023-02-17T17:30:51.216+05:30  INFO 980 --- [restartedMain] c.e.e.EmployeePayrollApplication         : The following 1 profile is active: "DEV"
-2023-02-17T17:30:52.439+05:30  WARN 980 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-02-17T17:30:52.668+05:30  INFO 980 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Started EmployeePayrollApplication in 1.678 seconds (process running for 2.054)
-2023-02-17T17:30:52.670+05:30  INFO 980 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Employee Payroll App Started in DEV Environment
-2023-02-17T17:59:14.734+05:30  INFO 28032 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Starting EmployeePayrollApplication using Java 17.0.6 with PID 28032 (C:\Users\Akshay\IdeaProjects\Employee_Payroll\target\classes started by Akshay in C:\Users\Akshay\IdeaProjects\Employee_Payroll)
-2023-02-17T17:59:14.736+05:30 DEBUG 28032 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Running with Spring Boot v3.0.2, Spring v6.0.4
-2023-02-17T17:59:14.736+05:30  INFO 28032 --- [restartedMain] c.e.e.EmployeePayrollApplication         : The following 1 profile is active: "DEV"
-2023-02-17T17:59:15.968+05:30  WARN 28032 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-02-17T17:59:16.237+05:30  INFO 28032 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Started EmployeePayrollApplication in 1.742 seconds (process running for 2.097)
-2023-02-17T17:59:16.239+05:30  INFO 28032 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Employee Payroll App Started in DEV Environment
-2023-02-17T18:00:10.536+05:30 ERROR 28032 --- [http-nio-8080-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: Id Not Found] with root cause
-
-java.lang.IllegalArgumentException: Id Not Found
-	at com.example.employee_payroll.service.EmployeePayrollService.lambda$getEmployeePayrollDataById$1(EmployeePayrollService.java:25) ~[classes/:na]
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
-	at com.example.employee_payroll.service.EmployeePayrollService.getEmployeePayrollDataById(EmployeePayrollService.java:25) ~[classes/:na]
-	at com.example.employee_payroll.controller.RestController.getEmployeePayroollDataById(RestController.java:33) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.4.jar:6.0.4]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.4.jar:6.0.4]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.4.jar:6.0.4]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.4.jar:6.0.4]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.4.jar:6.0.4]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.4.jar:6.0.4]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080) ~[spring-webmvc-6.0.4.jar:6.0.4]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.4.jar:6.0.4]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.4.jar:6.0.4]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.4.jar:6.0.4]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705) ~[tomcat-embed-core-10.1.5.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.4.jar:6.0.4]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.4.jar:6.0.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.4.jar:6.0.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.4.jar:6.0.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
-
-2023-02-17T18:01:29.107+05:30  INFO 16728 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Starting EmployeePayrollApplication using Java 17.0.6 with PID 16728 (C:\Users\Akshay\IdeaProjects\Employee_Payroll\target\classes started by Akshay in C:\Users\Akshay\IdeaProjects\Employee_Payroll)
-2023-02-17T18:01:29.108+05:30 DEBUG 16728 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Running with Spring Boot v3.0.2, Spring v6.0.4
-2023-02-17T18:01:29.108+05:30  INFO 16728 --- [restartedMain] c.e.e.EmployeePayrollApplication         : The following 1 profile is active: "DEV"
-2023-02-17T18:01:30.379+05:30  WARN 16728 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-02-17T18:01:30.615+05:30  INFO 16728 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Started EmployeePayrollApplication in 1.752 seconds (process running for 2.121)
-2023-02-17T18:01:30.617+05:30  INFO 16728 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Employee Payroll App Started in DEV Environment
-2023-02-17T18:01:39.374+05:30  WARN 16728 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.employee_payroll.exception.EmpPayRollException: Exception Not Found]
-2023-02-17T18:01:56.998+05:30  INFO 1088 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Starting EmployeePayrollApplication using Java 17.0.6 with PID 1088 (C:\Users\Akshay\IdeaProjects\Employee_Payroll\target\classes started by Akshay in C:\Users\Akshay\IdeaProjects\Employee_Payroll)
-2023-02-17T18:01:56.999+05:30 DEBUG 1088 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Running with Spring Boot v3.0.2, Spring v6.0.4
-2023-02-17T18:01:56.999+05:30  INFO 1088 --- [restartedMain] c.e.e.EmployeePayrollApplication         : The following 1 profile is active: "DEV"
-2023-02-17T18:01:58.255+05:30  WARN 1088 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-02-17T18:01:58.483+05:30  INFO 1088 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Started EmployeePayrollApplication in 1.714 seconds (process running for 2.065)
-2023-02-17T18:01:58.485+05:30  INFO 1088 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Employee Payroll App Started in DEV Environment
-2023-02-17T18:02:03.587+05:30  WARN 1088 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.employee_payroll.exception.EmpPayRollException: ID Not Found]
-2023-02-17T19:41:47.578+05:30  WARN 1088 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m41s624ms281µs700ns).
-2023-02-17T20:14:19.936+05:30  WARN 1088 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m31s974ms913µs900ns).
-2023-02-17T21:37:18.732+05:30  INFO 20600 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Starting EmployeePayrollApplication using Java 17.0.6 with PID 20600 (C:\Users\Akshay\IdeaProjects\Employee_Payroll\target\classes started by Akshay in C:\Users\Akshay\IdeaProjects\Employee_Payroll)
-2023-02-17T21:37:18.735+05:30 DEBUG 20600 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Running with Spring Boot v3.0.2, Spring v6.0.4
-2023-02-17T21:37:18.736+05:30  INFO 20600 --- [restartedMain] c.e.e.EmployeePayrollApplication         : The following 1 profile is active: "DEV"
-2023-02-17T21:37:21.762+05:30  WARN 20600 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-02-17T21:37:22.309+05:30  INFO 20600 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Started EmployeePayrollApplication in 4.128 seconds (process running for 5.114)
-2023-02-17T21:37:22.314+05:30  INFO 20600 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Employee Payroll App Started in DEV Environment
+2023-02-18T08:45:52.719+05:30  WARN 23604 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9h37m24s510ms634µs800ns).
+2023-02-18T09:00:37.622+05:30 DEBUG 23604 --- [http-nio-8080-exec-4] c.e.e.controller.RestController          : Employee DTO: EmployeePayrollDTO(name=Arush, salary=56656632, gender=male, note=Done, profilePic=ArushPhoto, department=[Sales, Hr])
+2023-02-18T09:01:03.028+05:30  INFO 40104 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Starting EmployeePayrollApplication using Java 17.0.6 with PID 40104 (C:\Users\Akshay\IdeaProjects\Employee_Payroll\target\classes started by Akshay in C:\Users\Akshay\IdeaProjects\Employee_Payroll)
+2023-02-18T09:01:03.033+05:30 DEBUG 40104 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-02-18T09:01:03.034+05:30  INFO 40104 --- [restartedMain] c.e.e.EmployeePayrollApplication         : The following 1 profile is active: "DEV"
+2023-02-18T09:01:06.310+05:30  WARN 40104 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-18T09:01:06.932+05:30  INFO 40104 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Started EmployeePayrollApplication in 4.36 seconds (process running for 6.225)
+2023-02-18T09:01:06.936+05:30  INFO 40104 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Employee Payroll App Started in DEV Environment
+2023-02-18T09:01:11.887+05:30  WARN 40104 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String "2017-09-13": Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2017-09-13' could not be parsed at index 2]
+2023-02-18T09:01:43.131+05:30  WARN 40104 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String "2017/09/13": Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2017/09/13' could not be parsed at index 2]
+2023-02-18T09:02:39.490+05:30  INFO 37216 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Starting EmployeePayrollApplication using Java 17.0.6 with PID 37216 (C:\Users\Akshay\IdeaProjects\Employee_Payroll\target\classes started by Akshay in C:\Users\Akshay\IdeaProjects\Employee_Payroll)
+2023-02-18T09:02:39.493+05:30 DEBUG 37216 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-02-18T09:02:39.494+05:30  INFO 37216 --- [restartedMain] c.e.e.EmployeePayrollApplication         : The following 1 profile is active: "DEV"
+2023-02-18T09:02:42.244+05:30  WARN 37216 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-18T09:02:42.758+05:30  INFO 37216 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Started EmployeePayrollApplication in 3.753 seconds (process running for 4.528)
+2023-02-18T09:02:42.763+05:30  INFO 37216 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Employee Payroll App Started in DEV Environment
+2023-02-18T09:02:49.250+05:30  WARN 37216 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String "2017/09/13": Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2017/09/13' could not be parsed at index 2]
+2023-02-18T09:02:50.890+05:30  WARN 37216 --- [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String "2017/09/13": Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2017/09/13' could not be parsed at index 2]
+2023-02-18T09:03:58.459+05:30  INFO 35168 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Starting EmployeePayrollApplication using Java 17.0.6 with PID 35168 (C:\Users\Akshay\IdeaProjects\Employee_Payroll\target\classes started by Akshay in C:\Users\Akshay\IdeaProjects\Employee_Payroll)
+2023-02-18T09:03:58.461+05:30 DEBUG 35168 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-02-18T09:03:58.462+05:30  INFO 35168 --- [restartedMain] c.e.e.EmployeePayrollApplication         : The following 1 profile is active: "DEV"
+2023-02-18T09:04:01.516+05:30  WARN 35168 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-18T09:04:02.046+05:30  INFO 35168 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Started EmployeePayrollApplication in 4.126 seconds (process running for 4.865)
+2023-02-18T09:04:02.048+05:30  INFO 35168 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Employee Payroll App Started in DEV Environment
+2023-02-18T09:04:14.408+05:30 DEBUG 35168 --- [http-nio-8080-exec-1] c.e.e.controller.RestController          : Employee DTO: EmployeePayrollDTO(name=Arush, salary=56656632, gender=male, note=Done, profilePic=ArushPhoto, department=[Sales, Hr])
+2023-02-18T09:11:53.429+05:30  INFO 22384 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Starting EmployeePayrollApplication using Java 17.0.6 with PID 22384 (C:\Users\Akshay\IdeaProjects\Employee_Payroll\target\classes started by Akshay in C:\Users\Akshay\IdeaProjects\Employee_Payroll)
+2023-02-18T09:11:53.432+05:30 DEBUG 22384 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-02-18T09:11:53.433+05:30  INFO 22384 --- [restartedMain] c.e.e.EmployeePayrollApplication         : The following 1 profile is active: "DEV"
+2023-02-18T09:11:55.990+05:30  WARN 22384 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-18T09:11:56.502+05:30  INFO 22384 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Started EmployeePayrollApplication in 3.596 seconds (process running for 4.361)
+2023-02-18T09:11:56.506+05:30  INFO 22384 --- [restartedMain] c.e.e.EmployeePayrollApplication         : Employee Payroll App Started in DEV Environment
+2023-02-18T09:13:07.188+05:30 DEBUG 22384 --- [http-nio-8080-exec-1] c.e.e.controller.RestController          : Employee DTO: EmployeePayrollDTO(name=Arush, salary=56656632, gender=male, startDate=2019-10-21, note=Done, profilePic=ArushPhoto, department=[Sales, Hr])
+2023-02-18T09:13:23.950+05:30  WARN 22384 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.example.employee_payroll.dto.ResponseDTO> com.example.employee_payroll.controller.RestController.createEmployeePayroollData(com.example.employee_payroll.dto.EmployeePayrollDTO): [Field error in object 'employeePayrollDTO' on field 'startDate': rejected value [2030-10-21]; codes [PastOrPresent.employeePayrollDTO.startDate,PastOrPresent.startDate,PastOrPresent.java.time.LocalDate,PastOrPresent]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeePayrollDTO.startDate,startDate]; arguments []; default message [startDate]]; default message [startDate should be past or today date]] ]
